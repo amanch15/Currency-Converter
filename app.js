@@ -66,3 +66,15 @@ btn.addEventListener("click", (evt) => {
 window.addEventListener("load", () => {
   updateExchangeRate();
 });
+
+//swap button 
+
+const swapBtn = document.querySelector(".fa-arrow-right-arrow-left");
+swapBtn.addEventListener("click", () => {
+  let temp = fromCurr.value;
+  fromCurr.value = toCurr.value;
+  toCurr.value = temp;
+  updateFlag(fromCurr);
+  updateFlag(toCurr);
+  updateExchangeRate();
+});
